@@ -38,19 +38,20 @@ int main() {
     printf("unsigned hex: %x, decimal: %u\n", d, d);
     
     //9
-   	for(int i = 0; i < 4; i++) {
-   		printf("hex byte: %hhx, dec: %hhu\n", *(d + i), *(d + i));
+    int i;
+   	for(i = 0; i < 4; i++) {
+   		printf("hex byte: %hhx, dec: %hhu\n", (d + i), (d + i));
     }	
     
     //10
-    for(int i = 0; i < 4; i++) {
+    for(i = 0; i < 4; i++) {
     	*(pdc + i) += 1;
     	printf("unsigned hex: %x\t unsigned decimal: %u\n", d, d);
     	printf("hex: %hhx\t decimal: %hhu\n", (pdc + i), *(pdc + i));
     }
     
     //11
-    for(int i = 0; i < 4; i++) {
+    for(i = 0; i < 4; i++) {
     	*(pdc + i) += 16;
     	printf("unsigned hex: %x\t unsigned decimal: %u\n", d, d);
     	printf("hex: %hhx\t decimal: %hhu\n", *(pdc +i), *(pdc + i));
